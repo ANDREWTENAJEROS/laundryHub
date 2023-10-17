@@ -1,0 +1,24 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="orderApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Order System</title>
+    <!-- Include AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- Include Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-database.js"></script>
+    <!-- Include your Firebase configuration -->
+    <script src="firebase-config.js"></script>
+    <!-- Include your app.js -->
+    <script src="app.js"></script>
+</head>
+<body ng-controller="OrderController">
+    <body ng-app="orderApp">
+        <div ng-include="'order-form-tab.html'" ng-show="activeTab === 'orderFormTab'"></div>
+        <div ng-include="'history-tab.html'" ng-show="activeTab === 'historyTab'"></div>
+    </body>
+</body>
+</html>

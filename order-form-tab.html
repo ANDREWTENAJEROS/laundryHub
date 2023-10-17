@@ -1,0 +1,26 @@
+<!-- Inside the body of index.html -->
+<div ng-show="activeTab === 'orderFormTab'">
+    <h2>Order Form</h2>
+    <label>Date:</label>
+    <input type="date" ng-model="date" required><br>
+    <label>Customer Name:</label>
+    <input type="text" ng-model="customerName" required><br>
+    <h3>Order Items:</h3>
+    <div>
+        <label>LF:</label>
+        <input type="number" ng-model="LF">
+        <label>RMF:</label>
+        <input type="number" ng-model="RMF">
+        <label>HF:</label>
+        <input type="number" ng-model="HF">
+        <label>HI:</label>
+        <input type="number" ng-model="HI">
+    </div>
+    <h4>Breakdown:</h4>
+    <p>LF: {{ LF * 150 }}</p>
+    <p>RMF: {{ RMF * 180 }}</p>
+    <p>HF: {{ HF * 200 }}</p>
+    <p>HI: {{ HI * 240 }}</p>
+    <h4>Total Price: {{ LF * 150 + RMF * 180 + HF * 200 + HI * 240 }}</h4>
+    <button ng-click="addOrder()">Complete Order</button>
+</div>
